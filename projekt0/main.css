@@ -1,0 +1,112 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+header{
+  background-color: black;
+  margin: 0;
+  padding: 20px 30px;
+  height: 350px;
+  color: whitesmoke;
+  background-image: url(images/main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .logo a {
+  display: inline-block;
+  background-image: url("images/logo.png");
+  text-indent: -999999px;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  top: -15px;
+  left: -25px;
+  border-radius: 50%;
+}
+
+nav ul { 
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left:20px;
+  position: relative;
+}
+
+nav ul li:hover {
+  font-size: 18px;  
+}
+
+
+.features {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.features figure{
+  margin: auto;
+  width: 320 px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features figure img {
+  border-radius: 15px;
+  width: 320;
+  box-shadow: black 0 0 15px;
+}
+
+.features figure img:hover {
+  width: 330px;
+}
+
+.bottompage {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+}
+
+footer {
+  margin:0;
+  padding: 15px;
+  background-color: black;
+  color: whitesmoke;
+  padding: 10px 20px;
+  text-align: left;
+  margin-top: auto;
+}
+
+
+
+
+

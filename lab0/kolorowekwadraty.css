@@ -9,3 +9,16 @@
     width: 100px;
     height: 100px;
   }
+
+  #first {
+    background-color: blueviolet;
+  }
+  #second {
+    background-color: beige;
+  }
+  #third {
+    background-color: blue;
+  }
+  #fourth {
+    background-color: black;
+  }

@@ -1,0 +1,54 @@
+<html lang = "pl">
+<head>
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="kontakt.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="galeria.html">Galeria</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="formularz">
+    <div>
+        <form>    
+            <p> Skontaktuj się poprzez email</p>
+
+            <fieldset>
+                <legend>Wymagane informacje</legend>
+                <label>E-mail:</label>
+                <br>
+                <input required type="email" name="E-mail" placeholder="e-mail">
+
+                <br>
+                <label>Temat:</label>
+                <br>
+                <select required name="Temat" placeholder="temat">
+                    <option value="">--Wybierz Temat--</option>
+                    <option value="project">Współpraca projektowa</option>
+                    <option value="question">Pytania o portfolio</option>
+                    <option value="offer">Oferty pracy</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </fieldset>
+
+            <br>
+            <label>wiadomość</label>
+            <br>
+            <textarea name="wiadomość" placeholder="pisz tu"></textarea>
+
+            <br>
+            <button type="submit" value="submit">Wyślij</button>
+        </form>
+    </div>
+    </section>
+    <footer>Piotr Pich</footer>
+</body>
+</html>
