@@ -20,8 +20,7 @@ header{
   padding: 20px 30px;
   height: 350px;
   color: whitesmoke;
-  background-image: url(images/main.jpg);
-  background-position: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), #3551b5), url(images/main.jpg);  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 

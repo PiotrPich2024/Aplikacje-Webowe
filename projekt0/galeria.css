@@ -1,0 +1,143 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  header{
+    background-color: black;
+    margin: 0;
+    padding: 20px 30px;
+    height: 350px;
+    color: whitesmoke;
+    background-image: linear-gradient(rgba(0,0,0,0.7), #3551b5), url(images/main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  header .logo a {
+    display: inline-block;
+    background-image: url("images/logo.png");
+    text-indent: -999999px;
+    background-repeat: no-repeat;
+    background-size: 90px;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: -15px;
+    left: -25px;
+    border-radius: 50%;
+  }
+  
+  nav ul { 
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  nav li {
+    display: inline;
+    margin-top: 10px;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  nav ul li:hover {
+    font-size: 18px;  
+  }
+  
+  .container {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: 20px; 
+  }
+
+  .container .heading {
+    padding: 20px;
+    width:40%;
+  }
+
+  .container .heading h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: antiquewhite;
+    text-shadow: 3px 0px black;
+    border-bottom: 6px solid black;
+  }
+
+  .container .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+  }
+
+  .container .box img {
+    margin: 10px;
+    box-shadow: black 0 0 15px;
+    border-radius: 15px;
+  }
+
+  .container .vid {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:10px;
+    align-items: center;
+  }
+
+  .bottompage {
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+  }
+  
+  footer {
+    margin:0;
+    padding: 15px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px 20px;
+    text-align: left;
+    margin-top: auto;
+  }
+
+  @media all and (max-width: 500px) {
+    .container .vid video {
+        padding: 10px;
+        width: 300px;
+    }
+    .container .box img {
+        width: 300px;
+    }
+  }
+  
+  
+  
+  
+  
+  
