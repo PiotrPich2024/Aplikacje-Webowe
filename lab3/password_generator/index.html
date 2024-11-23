@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1> Generator Haseł </h1>
+        <section>
+            <form>
+                <label for="min">Minimalna długość hasła:</label>
+                <br>
+                <input id="min" required type="text" placeholder="min. dł.">
+                <br>
+
+                <label for="max">Maksymalna długość hasła:</label>
+                <br>
+                <input id="max" required type="text" placeholder="max. dł.">
+                <br>
+
+                <label for="upper"> Czy hasło ma zawierać wielkie litery?
+                    <input id="upper" type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label for="special"> Czy hasło ma zawierać znaki specjalne? 
+                    <input id="special" type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+
+                <button  onclick="generate()">Wygeneruj Hasło</button>
+                
+            </form>
+        </section>
+    </body>
+</html>
