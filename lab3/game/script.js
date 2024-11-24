@@ -234,6 +234,7 @@ function showGameOverScreen() {
     ctx.fillRect(0, 0, width, height);
     if(sadMusic.paused){
         sadMusic.play();
+        sadMusic.loop=true;
     }
     playAgainButton.style.display = 'block';
 }
