@@ -4,6 +4,23 @@ let score = 0;
 const textScore = document.getElementById('score');
 let gameOver = false;
 
+//muzyczka
+const sadMusic = document.getElementById('sad-music');
+
+//mysz
+const customCursor = document.getElementById('custom-cursor');
+const canvasWrap = document.getElementById('canvas_wrap');
+
+canvasWrap.addEventListener('mousemove', (event) => {
+    const rect = canvasWrap.getBoundingClientRect();
+    const x = event.clientX - rect.left - customCursor.offsetWidth / 2;
+    const y = event.clientY - rect.top - customCursor.offsetHeight / 2;
+
+    customCursor.style.left = `${x}px`;
+    customCursor.style.top = `${y}px`;
+});
+
+
 //rozmiary canvasu
 const width = canvas.width=1680;
 const height = canvas.height=1050;
@@ -23,7 +40,7 @@ const zombieSpriteHeight = 312;
 
 class Zombie {
     constructor(){
-        this.scale = Math.floor(Math.random()*30) + 70;
+        this.scale = Math.floor(Math.random()*40) + 60;
         this.x = width - zombieSpriteWidth;
         this.y = getRandomPos();
         this.width = Math.floor((zombieSpriteWidth/100)*this.scale);
@@ -143,14 +160,20 @@ function animate(){
         gameOver = true;
     }
     if(gameOver){
+        showGameOverScreen();
+        playMusic();
         return;
     }
+    
 
     gameFrame ++;
     requestAnimationFrame(animate)
 }
 
 canvas.addEventListener('click', (event) =>{
+    if(gameOver){
+        return;
+    }
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
@@ -203,15 +226,16 @@ function gameLoop(){
         scheduleNextZombie();
         animate();
     }
-    else{
-        ctx.clearRect(0,0,width,height);
-        ctx.fillStyle = 'black';
-        ctx.font = '32px Arial';
-        ctx.textAlign = 'center';
-        ctx.fillText("Game Over",540,120);
+}
 
-        playAgainButton.style.display = 'block';
+function showGameOverScreen() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)'; 
+    ctx.fillRect(0, 0, width, height);
+    if(sadMusic.paused){
+        sadMusic.play();
     }
+    playAgainButton.style.display = 'block';
 }
 
 playAgainButton.addEventListener('click', ()=>{
@@ -222,8 +246,11 @@ playAgainButton.addEventListener('click', ()=>{
     zombies.length=0;
     stringScore = String(score).padStart(5, '0');
     textScore.innerText = stringScore;
+    sadMusic.pause();
+    sadMusic.currentTime = 0;
     gameLoop();
 })
+
 
 
 gameLoop();

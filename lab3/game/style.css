@@ -55,12 +55,26 @@ body {
     width: 600px;
     height: 250px;
     left:540px;
-    top:250px;
+    top:400px;
     background-color: rgb(51, 51, 151);
     color: whitesmoke;
+    border-radius: 25px;
+    font-size: 56px;
+    text-transform: uppercase;
 }
 
 #game-over:hover {
     background-color: rgb(122, 122, 212);
 }
 
+#custom-cursor {
+    position: absolute;
+    width: 120px; 
+    height: 120x; 
+    pointer-events: none; 
+    z-index: 1000; 
+}
+
+#canvas_wrap {
+    cursor: none;
+}

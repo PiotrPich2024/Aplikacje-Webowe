@@ -4,16 +4,19 @@
         <title>Game</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <div id="title">
         <h1>Game</h1>
     </div>
     <body>
+        <audio id="sad-music" src="sound/sad-music.mp3" preload="auto"></audio>
         <div id="canvas_wrap">
             <canvas id ="game">
             </canvas>
             <div id="score">00000</div>
-            <button id="game-over">Play Again</button>
+            <button id="game-over" style="display: none; position: absolute;">Play Again</button>
+            <img id="custom-cursor" src="images/aim.png" alt="Aim">
         </div>
 
     </body>
