@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#game {
+    margin: auto;
+    border: 2px solid black;
+    width: 400px;
+    height: 624px;
+}

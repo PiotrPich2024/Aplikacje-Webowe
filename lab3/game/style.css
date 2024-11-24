@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(51, 50, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: url('images/aim.png') 650 650, auto;
+}
+
+#title{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title h1{
+    font-size: 56px;
+}
+
+#game {
+    background-image: url(images/board-bg.jpg);
+    width: 1680px;
+    height: auto;
+    background-size: 1680px;
+    border: 5px solid white;
+    
+}
+
+#canvas_wrap{
+    position: relative;
+}
+
+#score{
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top:20px;
+    right: 30px;
+    color: white;
+    width: 430px;
+    height: 86px;
+    font-size: 6rem;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    left:540px;
+    top:250px;
+    background-color: rgb(51, 51, 151);
+    color: whitesmoke;
+}
+
+#game-over:hover {
+    background-color: rgb(122, 122, 212);
+}
+
